@@ -1,1 +1,11 @@
+on:
+  push:
+    branches:
+      -main
 
+jobs:
+  test:
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: test.py
